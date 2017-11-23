@@ -18,6 +18,7 @@
 		84C8677C1FC7195F00B375F4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8677B1FC7195F00B375F4 /* Board.swift */; };
 		84C8677F1FC71B2300B375F4 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8677E1FC71B2300B375F4 /* Cards.swift */; };
 		84C867811FC71C6000B375F4 /* ReceiveToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867801FC71C6000B375F4 /* ReceiveToken.swift */; };
+		84C867841FC725BB00B375F4 /* BoardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867831FC725BB00B375F4 /* BoardService.swift */; };
 		A8D2B28031B32A196EFFCBC0 /* Pods_KRTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		84C8677B1FC7195F00B375F4 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		84C8677E1FC71B2300B375F4 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		84C867801FC71C6000B375F4 /* ReceiveToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveToken.swift; sourceTree = "<group>"; };
+		84C867831FC725BB00B375F4 /* BoardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardService.swift; sourceTree = "<group>"; };
 		BABB819CC51257BA22C0A417 /* Pods-KRTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B949182EC4AFE4D10A635C /* Pods-KRTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 		8463641D1FC56C7B0026EB09 /* KRTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				84C867821FC724C000B375F4 /* Services */,
 				84C8677D1FC71A0800B375F4 /* Models */,
 				84C867761FC7138100B375F4 /* Controllers */,
 				8463641E1FC56C7B0026EB09 /* AppDelegate.swift */,
@@ -89,7 +92,6 @@
 				846364251FC56C7B0026EB09 /* Assets.xcassets */,
 				846364271FC56C7B0026EB09 /* LaunchScreen.storyboard */,
 				8463642A1FC56C7B0026EB09 /* Info.plist */,
-				84C867801FC71C6000B375F4 /* ReceiveToken.swift */,
 			);
 			path = KRTestTask;
 			sourceTree = "<group>";
@@ -112,6 +114,15 @@
 				84C8677E1FC71B2300B375F4 /* Cards.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		84C867821FC724C000B375F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84C867801FC71C6000B375F4 /* ReceiveToken.swift */,
+				84C867831FC725BB00B375F4 /* BoardService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		FC7564BDBCF735EEA6D57126 /* Frameworks */ = {
@@ -263,6 +274,7 @@
 				84C867781FC714EA00B375F4 /* CardsTableViewController.swift in Sources */,
 				8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */,
 				84C867751FC710D700B375F4 /* BoardsTableViewController.swift in Sources */,
+				84C867841FC725BB00B375F4 /* BoardService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

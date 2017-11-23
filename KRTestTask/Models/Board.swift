@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class Boards {
+class Board {
     
     var boardName: String = ""
     var boardDescription: String = ""
