@@ -13,6 +13,11 @@
 		846364291FC56C7B0026EB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846364271FC56C7B0026EB09 /* LaunchScreen.storyboard */; };
 		846364311FC56DC40026EB09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846364301FC56DC40026EB09 /* LoginViewController.swift */; };
 		84C867751FC710D700B375F4 /* BoardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867741FC710D600B375F4 /* BoardsTableViewController.swift */; };
+		84C867781FC714EA00B375F4 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867771FC714EA00B375F4 /* CardsTableViewController.swift */; };
+		84C8677A1FC7159300B375F4 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867791FC7159300B375F4 /* CardDetailViewController.swift */; };
+		84C8677C1FC7195F00B375F4 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8677B1FC7195F00B375F4 /* Board.swift */; };
+		84C8677F1FC71B2300B375F4 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8677E1FC71B2300B375F4 /* Cards.swift */; };
+		84C867811FC71C6000B375F4 /* ReceiveToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867801FC71C6000B375F4 /* ReceiveToken.swift */; };
 		A8D2B28031B32A196EFFCBC0 /* Pods_KRTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +31,11 @@
 		8463642A1FC56C7B0026EB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		846364301FC56DC40026EB09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84C867741FC710D600B375F4 /* BoardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsTableViewController.swift; sourceTree = "<group>"; };
+		84C867771FC714EA00B375F4 /* CardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		84C867791FC7159300B375F4 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		84C8677B1FC7195F00B375F4 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		84C8677E1FC71B2300B375F4 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		84C867801FC71C6000B375F4 /* ReceiveToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveToken.swift; sourceTree = "<group>"; };
 		BABB819CC51257BA22C0A417 /* Pods-KRTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		F8B949182EC4AFE4D10A635C /* Pods-KRTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,15 +82,36 @@
 		8463641D1FC56C7B0026EB09 /* KRTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				84C8677D1FC71A0800B375F4 /* Models */,
+				84C867761FC7138100B375F4 /* Controllers */,
 				8463641E1FC56C7B0026EB09 /* AppDelegate.swift */,
 				846364221FC56C7B0026EB09 /* Main.storyboard */,
 				846364251FC56C7B0026EB09 /* Assets.xcassets */,
 				846364271FC56C7B0026EB09 /* LaunchScreen.storyboard */,
 				8463642A1FC56C7B0026EB09 /* Info.plist */,
-				846364301FC56DC40026EB09 /* LoginViewController.swift */,
-				84C867741FC710D600B375F4 /* BoardsTableViewController.swift */,
+				84C867801FC71C6000B375F4 /* ReceiveToken.swift */,
 			);
 			path = KRTestTask;
+			sourceTree = "<group>";
+		};
+		84C867761FC7138100B375F4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				846364301FC56DC40026EB09 /* LoginViewController.swift */,
+				84C867741FC710D600B375F4 /* BoardsTableViewController.swift */,
+				84C867771FC714EA00B375F4 /* CardsTableViewController.swift */,
+				84C867791FC7159300B375F4 /* CardDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84C8677D1FC71A0800B375F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84C8677B1FC7195F00B375F4 /* Board.swift */,
+				84C8677E1FC71B2300B375F4 /* Cards.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FC7564BDBCF735EEA6D57126 /* Frameworks */ = {
@@ -224,7 +255,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C8677A1FC7159300B375F4 /* CardDetailViewController.swift in Sources */,
+				84C867811FC71C6000B375F4 /* ReceiveToken.swift in Sources */,
 				846364311FC56DC40026EB09 /* LoginViewController.swift in Sources */,
+				84C8677C1FC7195F00B375F4 /* Board.swift in Sources */,
+				84C8677F1FC71B2300B375F4 /* Cards.swift in Sources */,
+				84C867781FC714EA00B375F4 /* CardsTableViewController.swift in Sources */,
 				8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */,
 				84C867751FC710D700B375F4 /* BoardsTableViewController.swift in Sources */,
 			);
