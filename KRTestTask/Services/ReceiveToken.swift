@@ -12,7 +12,9 @@ import OAuthSwift
 class ReceiveToken {
 
 // oauth swift object (retain)
-var oauthswift: OAuthSwift?
+//var oauthswift: OAuthSwift?
+    var boards = [Board]()
+    let boardService = BoardService()
 
 // MARK: Trello
 func doOAuthTrello(viewController: UIViewController) {
@@ -30,10 +32,18 @@ func doOAuthTrello(viewController: UIViewController) {
         withCallbackURL: URL(string: "NS.KRTestTask://oauth-callback/trello")!,
         success: { credential, response, parameters in
             //self.showTokenAlert(name: serviceParameters["name"], credential: credential)
-            self.testTrello(oauthswift)
-            print(credential.oauthToken)
+            self.boardService.downloadBoards(oauthswift: oauthswift, completion: { (success) in
+                if success {
+                    print("success")
+                    self.boards = self.boardService.showBoard()
+                }
+            })
             
-            print(credential.oauthTokenSecret)
+            
+            //self.testTrello(oauthswift)
+            //print(credential.oauthToken)
+            
+            //print(credential.oauthTokenSecret)
             
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
             let BoardsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "BoardsTableViewController")

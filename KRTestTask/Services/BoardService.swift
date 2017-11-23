@@ -13,17 +13,15 @@ import OAuthSwift
 
 class BoardService {
     
-    let url = "https://api.trello.com/1"
     
-    let cardsUrl = "https://api.trello.com/1/boards/id/cards"
     var boards = [Board]()
     
     // function for parsing json
     typealias downloadUsersCompletion = () -> Void
     
-    func downloadUsers(completion: @escaping (_ success: Bool) -> Void) {
+    func downloadBoards(oauthswift: OAuth1Swift, completion: @escaping (_ success: Bool) -> Void) {
         
-        Alamofire.request(url).responseJSON { response in
+        Alamofire.request(Router.getBoards(key: "4be5ef10a4d5a83d6c5d04c5a2f19450", token: oauthswift.client.credential.oauthToken)).responseJSON { response in
             
             switch response.result {
             case .success(let rawJson):
@@ -45,6 +43,7 @@ class BoardService {
     }
     
     func showBoard() -> [Board] {
+        print(Array(boards))
         return Array(boards)
     }
     
