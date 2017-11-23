@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463641E1FC56C7B0026EB09 /* AppDelegate.swift */; };
-		846364211FC56C7B0026EB09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846364201FC56C7B0026EB09 /* ViewController.swift */; };
 		846364241FC56C7B0026EB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846364221FC56C7B0026EB09 /* Main.storyboard */; };
 		846364261FC56C7B0026EB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846364251FC56C7B0026EB09 /* Assets.xcassets */; };
 		846364291FC56C7B0026EB09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846364271FC56C7B0026EB09 /* LaunchScreen.storyboard */; };
+		846364311FC56DC40026EB09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846364301FC56DC40026EB09 /* LoginViewController.swift */; };
+		84C867751FC710D700B375F4 /* BoardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C867741FC710D600B375F4 /* BoardsTableViewController.swift */; };
+		A8D2B28031B32A196EFFCBC0 /* Pods_KRTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463641B1FC56C7B0026EB09 /* KRTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463641E1FC56C7B0026EB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		846364201FC56C7B0026EB09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		846364231FC56C7B0026EB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846364251FC56C7B0026EB09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846364281FC56C7B0026EB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8463642A1FC56C7B0026EB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846364301FC56DC40026EB09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84C867741FC710D600B375F4 /* BoardsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsTableViewController.swift; sourceTree = "<group>"; };
+		BABB819CC51257BA22C0A417 /* Pods-KRTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		F8B949182EC4AFE4D10A635C /* Pods-KRTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KRTestTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D2B28031B32A196EFFCBC0 /* Pods_KRTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111D4CDC19B754B244464D49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BABB819CC51257BA22C0A417 /* Pods-KRTestTask.debug.xcconfig */,
+				F8B949182EC4AFE4D10A635C /* Pods-KRTestTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		846364121FC56C7B0026EB09 = {
 			isa = PBXGroup;
 			children = (
 				8463641D1FC56C7B0026EB09 /* KRTestTask */,
 				8463641C1FC56C7B0026EB09 /* Products */,
+				111D4CDC19B754B244464D49 /* Pods */,
+				FC7564BDBCF735EEA6D57126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +73,22 @@
 			isa = PBXGroup;
 			children = (
 				8463641E1FC56C7B0026EB09 /* AppDelegate.swift */,
-				846364201FC56C7B0026EB09 /* ViewController.swift */,
 				846364221FC56C7B0026EB09 /* Main.storyboard */,
 				846364251FC56C7B0026EB09 /* Assets.xcassets */,
 				846364271FC56C7B0026EB09 /* LaunchScreen.storyboard */,
 				8463642A1FC56C7B0026EB09 /* Info.plist */,
+				846364301FC56DC40026EB09 /* LoginViewController.swift */,
+				84C867741FC710D600B375F4 /* BoardsTableViewController.swift */,
 			);
 			path = KRTestTask;
+			sourceTree = "<group>";
+		};
+		FC7564BDBCF735EEA6D57126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8463642D1FC56C7B0026EB09 /* Build configuration list for PBXNativeTarget "KRTestTask" */;
 			buildPhases = (
+				DA8728B1FF7C7D5C90EBBBC6 /* [CP] Check Pods Manifest.lock */,
 				846364171FC56C7B0026EB09 /* Sources */,
 				846364181FC56C7B0026EB09 /* Frameworks */,
 				846364191FC56C7B0026EB09 /* Resources */,
+				626C064373CA9B415C5A26C0 /* [CP] Embed Pods Frameworks */,
+				02C72545B8A74CD0E8D6B22C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +161,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02C72545B8A74CD0E8D6B22C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626C064373CA9B415C5A26C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KRTestTask/Pods-KRTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8728B1FF7C7D5C90EBBBC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KRTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		846364171FC56C7B0026EB09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846364211FC56C7B0026EB09 /* ViewController.swift in Sources */,
+				846364311FC56DC40026EB09 /* LoginViewController.swift in Sources */,
 				8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */,
+				84C867751FC710D700B375F4 /* BoardsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +361,7 @@
 		};
 		8463642E1FC56C7B0026EB09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BABB819CC51257BA22C0A417 /* Pods-KRTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +376,7 @@
 		};
 		8463642F1FC56C7B0026EB09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8B949182EC4AFE4D10A635C /* Pods-KRTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
