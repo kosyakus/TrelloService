@@ -29,10 +29,17 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         self.receiveToken.doOAuthTrello(viewController: self)
+        //performSegue(withIdentifier: "ShowBoards", sender: self)
         
         
     }
     
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowBoards" {
+            let controller = segue.destination as! BoardsTableViewController
+            controller.boards = receiveToken.boards
+        }
+    }*/
      
  
 }

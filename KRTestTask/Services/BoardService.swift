@@ -11,13 +11,13 @@ import Alamofire
 import SwiftyJSON
 import OAuthSwift
 
+var boards = [Board]()
+
 class BoardService {
     
     
-    var boards = [Board]()
-    
     // function for parsing json
-    typealias downloadUsersCompletion = () -> Void
+    typealias downloadBoardsCompletion = () -> Void
     
     func downloadBoards(oauthswift: OAuth1Swift, completion: @escaping (_ success: Bool) -> Void) {
         
@@ -29,7 +29,7 @@ class BoardService {
                 //print(json)
                 for  (_, subJson):(String, JSON) in json[] {
                     if  let addBoards = Board(subJson) {
-                        self.boards.append(addBoards)
+                        boards.append(addBoards)
                     }
                 }
                 
@@ -43,7 +43,9 @@ class BoardService {
     }
     
     func showBoard() -> [Board] {
-        print(Array(boards))
+        for i in boards {
+        print(i.boardName)
+        }
         return Array(boards)
     }
     

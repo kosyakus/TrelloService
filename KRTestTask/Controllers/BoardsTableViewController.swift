@@ -10,13 +10,28 @@ import UIKit
 
 class BoardsTableViewController: UITableViewController {
     
-    var boards = [Board]()
-    let boardService = BoardService()
+    //var boards: [Board]?
+    //var boards = [Board]()
+    //let boardService = BoardService()
+    //var oauthswift: OAuth1Swift?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(boards)
+        //print(boardService.boards.count)
+       /* DispatchQueue.main.async {
+            self.boards = self.boardService.showBoard()
+            self.tableView.reloadData()
+        } */
         
+      
+    }
+    
+    
+    // in storyboard change the Refresh to "Enabled", refr controll will appear. then connect it to this method
+    @IBAction func refreshControlActivated(_ sender: UIRefreshControl) {
+        tableView.reloadData()
+        sender.endRefreshing() // this line ends the animation
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,23 +43,31 @@ class BoardsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        //guard boards?.count != 0 else { return 1 }
+        //return (boards?.count)!
+        //return boardService.boards.count
+        return boards.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BoardCell", for: indexPath)
 
-        // Configure the cell...
-
+        //if let boards = boards {
+        let board = boards[indexPath.row]
+        //let board = boardService.boards[indexPath.row]
+        print(board.boardName)
+        cell.textLabel?.text = "\(board.boardName)"
+        cell.detailTextLabel?.text = board.boardDescription
+       //}
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -81,14 +104,17 @@ class BoardsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowCards" {
+            let controller = segue.destination as! CardsTableViewController
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                controller.board = boards[indexPath.row]
+            }
+        }
     }
-    */
+    
 
 }

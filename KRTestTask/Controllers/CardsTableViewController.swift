@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import OAuthSwift
 
 class CardsTableViewController: UITableViewController {
+    
+    var board: Board?
+    var cards = [Cards]()
+    let cardService = CardService()
+    let recTok = ReceiveToken()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.cardService.downloadCards(boardId: (board?.boardId)!, oauthswift: recTok.oauthswift, completion: { (success) in
+            if success {
+                self.cardService.showCard()
+                print("success")
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +36,26 @@ class CardsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return cards.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath)
 
-        // Configure the cell...
+        let card = cards[indexPath.row]
+        //print(card)
+        cell.textLabel?.text = "\(card.cardName)"
+        cell.detailTextLabel?.text = "\(card.cardOpenClose)"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
