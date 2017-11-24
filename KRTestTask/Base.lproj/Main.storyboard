@@ -98,6 +98,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Boards" id="Qbp-BX-TIt"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="mvL-S6-Wve">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="refreshControlActivated:" destination="gfm-rc-Px0" eventType="valueChanged" id="Uqj-TR-vML"/>
@@ -124,7 +125,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKW-3l-LTU">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XKW-3l-LTU">
                                             <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -164,43 +165,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ClosedOpenLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie0-hS-jzM">
-                                <rect key="frame" x="119" y="60" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ClosedOpenLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie0-hS-jzM">
+                                <rect key="frame" x="30" y="80" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DescriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dah-VS-QIC">
-                                <rect key="frame" x="122" y="161" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DescriptionLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dah-VS-QIC">
+                                <rect key="frame" x="30" y="182" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-Oo-E9N">
-                                <rect key="frame" x="144" y="109" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NameLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-Oo-E9N">
+                                <rect key="frame" x="30" y="131" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-MB-rmK">
-                                <rect key="frame" x="135" y="339" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-MB-rmK">
+                                <rect key="frame" x="135" y="338" width="104" height="30"/>
                                 <state key="normal" title="Send comment"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-6S-aal">
-                                <rect key="frame" x="123" y="282" width="129" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-6S-aal">
+                                <rect key="frame" x="30" y="283" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YtU-y5-OiB" firstAttribute="trailing" secondItem="ie0-hS-jzM" secondAttribute="trailing" constant="30" id="5My-Dr-wtm"/>
+                            <constraint firstItem="0dj-Oo-E9N" firstAttribute="top" secondItem="ie0-hS-jzM" secondAttribute="bottom" constant="30" id="DGs-mk-ee7"/>
+                            <constraint firstItem="ie0-hS-jzM" firstAttribute="top" secondItem="dcf-ka-vqc" secondAttribute="top" constant="80" id="Iw9-Hc-rzS"/>
+                            <constraint firstItem="YtU-y5-OiB" firstAttribute="trailing" secondItem="yDW-6S-aal" secondAttribute="trailing" constant="30" id="KDH-as-Vbl"/>
+                            <constraint firstItem="yDW-6S-aal" firstAttribute="leading" secondItem="YtU-y5-OiB" secondAttribute="leading" constant="30" id="Kwk-7A-zhx"/>
+                            <constraint firstItem="dah-VS-QIC" firstAttribute="top" secondItem="0dj-Oo-E9N" secondAttribute="bottom" constant="30" id="PAs-0s-T1q"/>
+                            <constraint firstItem="I8s-MB-rmK" firstAttribute="centerX" secondItem="dcf-ka-vqc" secondAttribute="centerX" id="TOi-FG-mfV"/>
+                            <constraint firstItem="YtU-y5-OiB" firstAttribute="trailing" secondItem="dah-VS-QIC" secondAttribute="trailing" constant="30" id="cyI-b2-guX"/>
+                            <constraint firstItem="I8s-MB-rmK" firstAttribute="top" secondItem="yDW-6S-aal" secondAttribute="bottom" constant="25" id="er7-ga-rRf"/>
+                            <constraint firstItem="0dj-Oo-E9N" firstAttribute="leading" secondItem="YtU-y5-OiB" secondAttribute="leading" constant="30" id="hxQ-n4-tcY"/>
+                            <constraint firstItem="ie0-hS-jzM" firstAttribute="leading" secondItem="YtU-y5-OiB" secondAttribute="leading" constant="30" id="lMw-sq-cP1"/>
+                            <constraint firstItem="YtU-y5-OiB" firstAttribute="trailing" secondItem="0dj-Oo-E9N" secondAttribute="trailing" constant="30" id="s7c-Wb-WAw"/>
+                            <constraint firstItem="yDW-6S-aal" firstAttribute="top" secondItem="dah-VS-QIC" secondAttribute="bottom" constant="80" id="wsJ-aT-fZG"/>
+                            <constraint firstItem="dah-VS-QIC" firstAttribute="leading" secondItem="YtU-y5-OiB" secondAttribute="leading" constant="30" id="xXx-Ar-ZHs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YtU-y5-OiB"/>
                     </view>
+                    <connections>
+                        <outlet property="closeLabel" destination="ie0-hS-jzM" id="8gJ-bq-3A1"/>
+                        <outlet property="commentTextField" destination="yDW-6S-aal" id="svO-zZ-oI5"/>
+                        <outlet property="descriptionLabel" destination="dah-VS-QIC" id="B63-NB-jiZ"/>
+                        <outlet property="nameLabel" destination="0dj-Oo-E9N" id="v01-Y9-cLO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="19d-Ef-GCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

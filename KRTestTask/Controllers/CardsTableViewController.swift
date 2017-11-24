@@ -19,10 +19,11 @@ class CardsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.cardService.downloadCards(boardId: (board?.boardId)!, oauthswift: recTok.oauthswift, completion: { (success) in
+        self.cardService.downloadCards(boardId: (board?.boardId)!, oauthswift: oath!, completion: { (success) in
             if success {
-                self.cardService.showCard()
+                self.cards = self.cardService.showCard()
                 print("success")
+                self.tableView.reloadData()
             }
         })
     }
@@ -51,7 +52,11 @@ class CardsTableViewController: UITableViewController {
         let card = cards[indexPath.row]
         //print(card)
         cell.textLabel?.text = "\(card.cardName)"
-        cell.detailTextLabel?.text = "\(card.cardOpenClose)"
+        if card.cardOpenClose == false {
+            cell.detailTextLabel?.text = "The task is open"
+        } else {
+            cell.detailTextLabel?.text = "The task is closed"
+        }
 
         return cell
     }
@@ -92,14 +97,17 @@ class CardsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     if segue.identifier == "ShowCardDetail" {
+     let controller = segue.destination as! CardDetailViewController
+     if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+     controller.card = cards[indexPath.row]
+     }
+     }
     }
-    */
+    
 
 }

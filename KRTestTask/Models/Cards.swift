@@ -19,8 +19,8 @@ class Cards {
         
         guard
             let cardOpenClose = json["closed"].bool,
-            let cardName = json["desc"].string,
-            let cardDescription = json["name"].string
+            let cardName = json["name"].string,
+            let cardDescription = json["desc"].string
             
             else { return nil }
         
