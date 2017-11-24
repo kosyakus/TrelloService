@@ -13,8 +13,6 @@ var oath: OAuth1Swift?
 
 class ReceiveToken {
 
-// oauth swift object (retain)
-//var oauthswift: OAuthSwift?
     var boards = [Board]()
     let boardService = BoardService()
     
@@ -37,18 +35,15 @@ func doOAuthTrello(viewController: UIViewController) {
             oath = oauthswift
             self.boardService.downloadBoards(oauthswift: oauthswift, completion: { (success) in
                 if success {
-                    DispatchQueue.background(background: {
+                    //DispatchQueue.background(background: {
                         print("success")
-                    }, completion:{
+                    //}, completion:{
                         print("ARRRRR \(self.boards.count)")
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
                         let boardsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "Navigation")
                         viewController.present(boardsTableViewController, animated: true, completion: nil)
                         print("You passed to Boards!")
-                    })
-                    
-                   
-            
+                    //})
                 }
             })
             
@@ -79,17 +74,4 @@ func testTrello(_ oauthswift: OAuth1Swift) {
 }
 
 
-extension DispatchQueue {
-    
-    static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
-        DispatchQueue.global(qos: .background).async {
-            background?()
-            if let completion = completion {
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
-                    completion()
-                })
-            }
-        }
-    }
-    
-}
+

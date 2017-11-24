@@ -6,13 +6,6 @@
 //  Copyright © 2017 NS. All rights reserved.
 //
 
-//let url = "https://api.trello.com/1"
-
-//let boardsUrl = "https://api.trello.com/1/members/me/boards"
-
-//let cardsUrl = "https://api.trello.com/1/members/me/boards/[boardId]"
-
-
 import Foundation
 import Alamofire
 

@@ -29,7 +29,7 @@ class CardService {
             switch response.result {
             case .success(let rawJson):
                 let json = JSON(rawJson)
-                print(json)
+                //print(json)
                 for  (_, subJson):(String, JSON) in json[] {
                     if  let addCards = Cards(subJson) {
                         self.cards.append(addCards)

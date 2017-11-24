@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844897771FC85EA300B9CB30 /* DispatchExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844897761FC85EA300B9CB30 /* DispatchExtention.swift */; };
 		8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463641E1FC56C7B0026EB09 /* AppDelegate.swift */; };
 		846364241FC56C7B0026EB09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846364221FC56C7B0026EB09 /* Main.storyboard */; };
 		846364261FC56C7B0026EB09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846364251FC56C7B0026EB09 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		69D993ECA2CA6F857E9C7017 /* Pods_KRTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KRTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		844897761FC85EA300B9CB30 /* DispatchExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchExtention.swift; sourceTree = "<group>"; };
 		8463641B1FC56C7B0026EB09 /* KRTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KRTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8463641E1FC56C7B0026EB09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846364231FC56C7B0026EB09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		844897781FC85EA700B9CB30 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				844897761FC85EA300B9CB30 /* DispatchExtention.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		846364121FC56C7B0026EB09 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +100,7 @@
 		8463641D1FC56C7B0026EB09 /* KRTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				844897781FC85EA700B9CB30 /* Extentions */,
 				84C867871FC7677E00B375F4 /* Router */,
 				84C867821FC724C000B375F4 /* Services */,
 				84C8677D1FC71A0800B375F4 /* Models */,
@@ -289,6 +300,7 @@
 				846364311FC56DC40026EB09 /* LoginViewController.swift in Sources */,
 				84C8677C1FC7195F00B375F4 /* Board.swift in Sources */,
 				84C8677F1FC71B2300B375F4 /* Cards.swift in Sources */,
+				844897771FC85EA300B9CB30 /* DispatchExtention.swift in Sources */,
 				84C867781FC714EA00B375F4 /* CardsTableViewController.swift in Sources */,
 				84C8678B1FC826AA00B375F4 /* CardService.swift in Sources */,
 				8463641F1FC56C7B0026EB09 /* AppDelegate.swift in Sources */,

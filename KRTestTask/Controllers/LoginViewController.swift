@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.loginButton.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,18 +29,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         self.receiveToken.doOAuthTrello(viewController: self)
-        //performSegue(withIdentifier: "ShowBoards", sender: self)
-        
-        
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowBoards" {
-            let controller = segue.destination as! BoardsTableViewController
-            controller.boards = receiveToken.boards
-        }
-    }*/
-     
  
 }
 
