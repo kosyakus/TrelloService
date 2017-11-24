@@ -35,15 +35,15 @@ func doOAuthTrello(viewController: UIViewController) {
             oath = oauthswift
             self.boardService.downloadBoards(oauthswift: oauthswift, completion: { (success) in
                 if success {
-                    //DispatchQueue.background(background: {
+                    DispatchQueue.background(background: {
                         print("success")
-                    //}, completion:{
+                    }, completion:{
                         print("ARRRRR \(self.boards.count)")
                         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)//главный сториборд
                         let boardsTableViewController = mainStoryboard.instantiateViewController(withIdentifier: "Navigation")
                         viewController.present(boardsTableViewController, animated: true, completion: nil)
                         print("You passed to Boards!")
-                    //})
+                    })
                 }
             })
             
